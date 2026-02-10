@@ -1,0 +1,21 @@
+# ---------------- Model Architecture ----------------
+input_size: 256        # Input spatial resolution (H/W)
+depth_size: 16         # Input depth dimension (D)
+in_channels: 1         # Number of input channels
+out_channels: 1        # Number of output channels
+num_channels: 64       # Base channel width for UNet
+num_res_blocks: 1     # Number of residual blocks per level
+timesteps: 1000       # Number of diffusion timesteps
+
+# ---------------- Linear Probing ----------------
+linear:
+  n_epoch: 30          # Number of training epochs for linear classifier
+  batch_size: 10      # Batch size
+  lrate: 0.001       # Initial learning rate
+  timestep: 100       # Diffusion timestep used to extract features
+  blockname: "mid_2"  # Block name for feature extraction (key in activation dict)
+
+# ---------------- Network Auxiliary Info ----------------
+network:
+  image_shape: [1, 16, 256, 256]   # [C, D, H, W], used to create dummy tensor for
+                                  # determining feature dimensionality
