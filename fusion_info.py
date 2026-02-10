@@ -55,7 +55,6 @@ def patient_level_reduce(accids, preds, labels, reduce="mean"):
 def evaluate_logits(logits: torch.Tensor, labels: torch.Tensor, acc_id) -> Dict[str, float]:
     probs = torch.sigmoid(logits).detach().cpu().numpy()
     labels_np = labels.cpu().numpy()
-    # 聚合成患者级
     agg_probs, agg_labels = patient_level_reduce(acc_id, probs, labels_np)
     preds = (agg_probs > 0.5).astype(np.float32)
 
@@ -297,9 +296,7 @@ class TabularOnlyNet(nn.Module):
         x = torch.cat([x_cont, x_sex, x_patient_type, e], dim=-1)
         h = self.mlp(x)
         return self.out(h)
-###########################################
-# 3) 主程序
-###########################################
+
 def run_training():
     
     set_seed(2026)
@@ -381,7 +378,6 @@ def run_training():
     crit = nn.BCEWithLogitsLoss(reduction="none") 
 
 
-    # ===== 训练 =====
     for epoch in range(EPOCHS):
         model.train()
         total_loss = 0

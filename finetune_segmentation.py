@@ -75,8 +75,6 @@ def unwrap_ddp(m: nn.Module) -> nn.Module:
     return m.module if hasattr(m, "module") else m
 
 
-
-
 def get_model(cfg, opt, device):
     model = create_model(
         cfg.input_size,
@@ -142,7 +140,6 @@ class ResBlock3D(nn.Module):
 
     def forward(self, x):
         return F.relu(x + self.block(x))
-
 
 
 # ---------------- Loss / Metrics ---------------- #

@@ -433,8 +433,6 @@ def train(opt):
     dist.destroy_process_group()
 
 
-
-
 # ---------------- Main ---------------- #
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

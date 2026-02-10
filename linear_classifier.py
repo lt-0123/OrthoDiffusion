@@ -240,7 +240,6 @@ def evaluate(cached, classifiers, device, pose, pooling, save_path="eval_results
             "OR": or_,
             "OF1": of1
         }
-        # ---- 保存CSV ----
         csv_path = save_path.replace(".csv", f"{pooling}_pose_{pose}_{key.replace('/', '_')}_knee_merged.csv")
         with open(csv_path, "w", newline="") as f:
             writer = csv.writer(f)

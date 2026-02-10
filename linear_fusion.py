@@ -94,9 +94,7 @@ class MultiLabelGatingFusion(nn.Module):
             )
 
     def forward(self, logits, return_gate=False):
-        """
-        probs: (B,3,K)，三个姿态的sigmoid输出
-        """
+        
         # Step 1: per-label gating
         w = self.gate(logits)                 # (B,3,K)
         z = (w * logits).sum(dim=1)  # (B,K)
@@ -114,8 +112,6 @@ class SinglePoseHead(nn.Module):
         self.head = LinearOrMLP(in_dim, num_classes, use_mlp=use_mlp)
     def forward(self, x):
         return self.head(x)
-
-
 
 
 def run_kfold_gating_fusion(
@@ -461,8 +457,6 @@ class FusedTensorDataset(data.Dataset):
         else:
             return (self.Xa[idx], self.Xb[idx], self.Xc[idx]), self.Y[idx], w, self.A[idx]
 
-
-
 class CrossAttnFusion(nn.Module):
     """
     Cross-attention fusion for three pose features.
@@ -738,8 +732,6 @@ def train_one_split(
         if is_main():
             save_metrics_csv(metrics, save_csv)
         return
-
-
 
     # DDP (optional)
     if dist.is_initialized():
