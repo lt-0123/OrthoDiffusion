@@ -1,7 +1,7 @@
 '''
 torchrun --nproc_per_node=1 finetune_classifier.py \
     --pose_id 0 \
-    --config config_finetune.yaml \
+    --config config/config_finetune.yaml \
     --weightfile train_diffusion_pose_2/model.pt \
     --classes 8 --finetune_diffusion \
     --save_pooled
