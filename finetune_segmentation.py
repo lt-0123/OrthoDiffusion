@@ -1,6 +1,6 @@
 '''
 torchrun --nproc_per_node=1 finetune_segmentation.py \
-    --pose_id 0 --config config/config_segmentation.yaml \
+    --pose_id 0 --config configs/config_segmentation.yaml \
     --weightfile train_diffusion_pose_2/model.pt \
     --num_classes 11 \
     --finetune_diffusion

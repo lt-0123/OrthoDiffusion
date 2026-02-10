@@ -84,7 +84,7 @@ Freeze diffusion backbone:
 ```bash
 torchrun --nproc_per_node=1 linear_classifier.py \
     --pose_id 2 \
-    --config config/config_linear.yaml \
+    --config configs/config_linear.yaml \
     --weightfile train_diffusion_pose_2/model.pt \
     --classes 8
 ```
@@ -94,7 +94,7 @@ torchrun --nproc_per_node=1 linear_classifier.py \
 ```bash
 torchrun --nproc_per_node=1 finetune_classifier.py \
     --pose_id 0 \
-    --config config/config_finetune.yaml \
+    --config configs/config_finetune.yaml \
     --weightfile train_diffusion_pose_0/model.pt \
     --classes 8 --finetune_diffusion \
     --save_pooled
@@ -131,7 +131,7 @@ Supports:
 
 ```bash
 torchrun --nproc_per_node=1 finetune_segmentation.py \
-    --pose_id 1 --config config/config_segmentation.yaml \
+    --pose_id 1 --config configs/config_segmentation.yaml \
     --weightfile train_diffusion_pose_1/model.pt \
     --num_classes 11 \
     --finetune_diffusion

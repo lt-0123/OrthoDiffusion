@@ -1,7 +1,7 @@
 '''
 torchrun --nproc_per_node=1 linear_classifier.py \
     --pose_id 2 \
-    --config config/config_linear.yaml \
+    --config configs/config_linear.yaml \
     --weightfile train_diffusion_pose_2/model.pt \
     --classes 8
 
