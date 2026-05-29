@@ -1,6 +1,6 @@
-
 # OrthoDiffusion
 
+[![arXiv](https://img.shields.io/badge/arXiv-2602.20752-b31b1b.svg)](https://arxiv.org/abs/2602.20752)
 [![Hugging Face Model](https://img.shields.io/badge/🤗%20Hugging%20Face-OrthoDiffusion-yellow)](https://huggingface.co/lanstat0123/orthodiffusion)
 
 **OrthoDiffusion: A Generalizable Multi-Task Diffusion Foundation Model for Musculoskeletal MRI Interpretation**
@@ -161,11 +161,15 @@ Partial access can be requested from the corresponding authors.
 If you use this code, please cite:
 
 ```
-@article{orthodiffusion2025,
-  title={OrthoDiffusion: A Generalizable Multi-Task Diffusion Foundation Model for Musculoskeletal MRI Interpretation},
-  author={Lan, Tian and Xu, Lei and Yuan, Zimu et al.},
-  journal={},
-  year={2025}
+
+@misc{orthodiffusion2026,
+      title={OrthoDiffusion: A Generalizable Multi-Task Diffusion Foundation Model for Musculoskeletal MRI Interpretation}, 
+      author={Tian Lan and Lei Xu and Zimu Yuan and Shanggui Liu and Jiajun Liu and Jiaxin Liu and Weilai Xiang and Hongyu Yang and Dong Jiang and Jianxin Yin and Dingyu Wang},
+      year={2026},
+      eprint={2602.20752},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.20752}, 
 }
 ```
 
