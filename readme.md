@@ -1,6 +1,8 @@
 
 # OrthoDiffusion
 
+[![Hugging Face Model](https://img.shields.io/badge/🤗%20Hugging%20Face-OrthoDiffusion-yellow)](https://huggingface.co/lanstat0123/orthodiffusion)
+
 **OrthoDiffusion: A Generalizable Multi-Task Diffusion Foundation Model for Musculoskeletal MRI Interpretation**
 
 This repository provides the official PyTorch implementation of **OrthoDiffusion**, a diffusion-based foundation model for musculoskeletal MRI analysis, supporting:
