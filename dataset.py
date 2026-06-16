@@ -2,7 +2,6 @@ from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import Dataset
 from torchvision.transforms import Compose, ToTensor, Lambda
 from glob import glob
-from utils.dtypes import LabelEnum
 import matplotlib.pyplot as plt
 import nibabel as nib
 import torchio as tio
